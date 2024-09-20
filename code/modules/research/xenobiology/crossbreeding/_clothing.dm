@@ -140,6 +140,8 @@ Slimecrossing Armor
 	. = ..()
 	if(slot == SLOT_WEAR_SUIT)
 		ADD_TRAIT(user, TRAIT_IMMUTABLE_SLOW, "immutableslow_[REF(src)]")
+	if(!(slot == SLOT_WEAR_SUIT))
+		REMOVE_TRAIT(user, TRAIT_IMMUTABLE_SLOW, "immutableslow_[REF(src)]")
 
 /obj/structure/light_prism/spectral
 	name = "spectral light prism"
